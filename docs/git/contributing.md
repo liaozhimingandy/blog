@@ -1,6 +1,4 @@
----
-outline: deep
----
+# 规则
 
 ##  编码规则
 
@@ -39,3 +37,30 @@ outline: deep
   │
   └─⫸ Commit 类型: build|ci|docs|feat|fix|perf|refactor|test
 ````
+
+##### Type
+
+必须是以下之一:
+
+* **build**: 影响构建系统或外部依赖关系的更改 (例如范围: gulp, broccoli, npm)
+* **ci**: 更改CI配置文件和脚本 (示例: CircleCi, SauceLabs)
+* **docs**: 仅文档更改
+* **feat**: 一个新功能
+* **fix**: 错误修复
+* **perf**: 提高性能的代码更改
+* **refactor**: 既不修复错误也不添加功能的代码更改
+* **test**: 添加缺失的测试或更正现有测试
+
+::: details 示例
+```
+fix(compiler): invoke method-based tracking function with context (#54960)
+
+Previously we assumed that if a `for` loop tracking function is in the form of `someMethod($index, $item)`, it will be pure so we didn't pass the parameter to bind the context to it. This appears to be risky, because we don't know if the method is trying to access `this`.
+
+These changes play it safe by always binding method-based tracking functions.
+
+Fixes #53628.
+
+PR Close #54960
+```
+:::
