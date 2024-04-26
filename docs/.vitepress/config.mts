@@ -21,8 +21,10 @@ export default defineConfig({
             {text: '首页', link: '/'},
             {text: 'Git', link: '/git/git'},
             {
-                text: "关于",
-                items: []
+            text: "日志",
+                items: [
+                    {text: 'Flutter', link: '/log/flutter/log-2024-04-24'},
+                ]
             }
         ],
         sidebar: {
@@ -30,6 +32,9 @@ export default defineConfig({
                 {text: "Git", link: "/git/git"},
                 {text: "贡献", link: "/git/contributing"}
             ],
+            '/log/flutter/': [
+                {text: "log-2024-04-24", link: "/log/flutter/log-2024-04-24"},
+            ]
         },
         // 右侧边栏配置，默认值是"In hac pagina"
         outline: {label: "本页目录"},

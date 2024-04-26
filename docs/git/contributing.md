@@ -27,15 +27,15 @@
 ````javascript
 <类型>(<作用域>): <主题>
   │       │        │
-  │       │        └─⫸ 简短总结，现在时态，不需要首字母大写，末尾不用加句号
+  │       │        └─⫸ 简短总结(subject(必填))，现在时态，不需要首字母大写，末尾不用加句号
   │       │
-  │       └─⫸ Commit 作用域: animations|bazel|benchpress|common|compiler|compiler-cli|core|
+  │       └─⫸ Commit 作用域(scope(选填)): animations|bazel|benchpress|common|compiler|compiler-cli|core|
   │                          elements|forms|http|language-service|localize|platform-browser|
   │                          platform-browser-dynamic|platform-server|router|service-worker|
   │                          upgrade|zone.js|packaging|changelog|docs-infra|migrations|
   │                          devtools
   │
-  └─⫸ Commit 类型: build|ci|docs|feat|fix|perf|refactor|test
+  └─⫸ Commit type类型(必填): build|ci|docs|feat|fix|perf|refactor|test|style|chore|revert
 ````
 
 ##### Type
@@ -48,8 +48,11 @@
 * **feat**: 一个新功能
 * **fix**: 错误修复
 * **perf**: 提高性能的代码更改
+* **style**: 格式修改
 * **refactor**: 既不修复错误也不添加功能的代码更改
 * **test**: 添加缺失的测试或更正现有测试
+* **chore**: 修改构建流程、或者增加依赖库、工具
+* **revert**: 回滚版本
 
 ::: details 示例
 ```
